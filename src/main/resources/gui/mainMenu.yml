@@ -1,0 +1,19 @@
+Title: "&e&l[Siêu rèn]"
+Format:
+  - "aaaaaaaaa"
+  - "abbbbbbba"
+  - "abbbbbbbc"
+  - "abbbbbbba"
+  - "aaaaaaaaa"
+Items:
+  a:
+    Type: "WHITE_STAINED_GLASS_PANE"
+    Name: "&f"
+  b:
+    Key: "CATEGORY"
+    Type: "LIGHT_GRAY_STAINED_GLASS_PANE"
+    Name: "&f"
+  c:
+    Key: "EDIT"
+    Type: "WHITE_STAINED_GLASS_PANE"
+    Name: "&f"

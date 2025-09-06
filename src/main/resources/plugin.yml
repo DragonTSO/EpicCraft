@@ -1,0 +1,29 @@
+name: EpicCraftItem
+version: '1.1'
+main: com.dragondirt.epiccraftitem.EpicCraftItem
+api-version: '1.20'
+softdepend: [AdvancedEnchantments, MMOItems, FindItem]
+commands:
+  EpicCraftItem:
+    description: Main command for EpicCraftItem plugin
+    usage: /<command> [help|reload|debug|open|edit]
+    permission: epiccraftitem.admin
+  EpicCraft:
+    description: Alias for EpicCraftItem command
+    usage: /<command> [help|reload|debug|open|edit]
+    permission: epiccraftitem.admin
+  ECraft:
+    description: Alias for EpicCraftItem command
+    usage: /<command> [help|reload|debug|open|edit]
+    permission: epiccraftitem.admin
+
+permissions:
+  epiccraftitem.admin:
+    description: Full access to EpicCraftItem commands
+    default: op
+  epiccraftitem.user:
+    description: Basic access to EpicCraftItem features
+    default: true
+  epiccraftitem.edit:
+    description: Permission to edit craft recipes
+    default: op

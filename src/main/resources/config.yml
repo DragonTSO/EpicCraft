@@ -1,0 +1,37 @@
+# EpicCraftItem Configuration
+# Debug mode for development
+DefaultDebug: true
+
+# Return CE Book settings
+ReturnCeBook:
+  Enable: true
+  Success: 100
+  Destroy: 0
+
+# Return MMO Gem settings
+ReturnMMOGem: true
+ReturnCeBookWhenFailed: true
+ReturnMMOGemWhenFailed: true
+
+# Lore requirements display
+LoreRequire:
+  - "&f"
+  - "&e> Yêu cầu: &a<amount>"
+
+# Custom items for GUI
+ItemCustom:
+  EditEnable:
+    Type: "GREEN_STAINED_GLASS_PANE"
+    Name: "&aĐang chỉnh sửa"
+  EditDisable:
+    Type: "RED_STAINED_GLASS_PANE"
+    Name: "&cĐã tắt chỉnh sửa"
+  ItemDetail:
+    Type: "GREEN_STAINED_GLASS_PANE"
+    Name: "&aVào gui chi tiết craft"
+  CheckItemEnable:
+    Type: "GREEN_STAINED_GLASS_PANE"
+    Name: "&a<name> đang được kiểm tra"
+  CheckItemDisable:
+    Type: "RED_STAINED_GLASS_PANE"
+    Name: "&c<name> đã tắt kiểm tra"

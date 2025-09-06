@@ -1,0 +1,15 @@
+Title: "&e&l[Chi tiết] <item>"
+Format:
+  - "aaaaaaaaa"
+  - "abbbbbbba"
+  - "abbbbbbba"
+  - "abbbbbbba"
+  - "aaaaaaaaa"
+Items:
+  a:
+    Type: "WHITE_STAINED_GLASS_PANE"
+    Name: "&f"
+  b:
+    Key: "DETAIL"
+    Type: "LIGHT_GRAY_STAINED_GLASS_PANE"
+    Name: "&f"

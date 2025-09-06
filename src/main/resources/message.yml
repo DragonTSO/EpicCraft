@@ -1,0 +1,15 @@
+Help:
+  - "&e[EpicCraft]"
+  - "&a/ecraft &f- Mở menu chính."
+  - "&a/ecraft help &f- Xem hướng dẫn các câu lệnh."
+  - "&a/ecraft open <name> &f- Mở giao diện craft nhanh."
+  - "&a/ecraft edit category &f- Mở giao diện chỉnh sửa thể loại."
+  - "&a/ecraft edit item <category> &f- Mở giao diện chỉnh sửa các item trong thể loại."
+  - "&a/ecraft debug &f- Bật/Tắt debug."
+  - "&a/ecraft reload &f- Tải lại dữ liệu."
+
+CraftChanceSuccess: "&aChế tạo thành công"
+CraftChanceFailed: "&cChế tạo thất bại"
+CraftFailed: "&cChế tạo thất bại, còn thiếu <items>"
+Reload: "&aTải lại thành công"
+CmdError: "&cLệnh không chính xác"

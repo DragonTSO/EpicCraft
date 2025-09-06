@@ -1,0 +1,35 @@
+# Categories configuration
+# Add your categories here
+categories:
+  weapons:
+    name: "&c&lVũ khí"
+    slot: 10
+    item:
+      type: "DIAMOND_SWORD"
+      name: "&c&lVũ khí"
+      lore:
+        - "&7Danh mục vũ khí"
+  tools:
+    name: "&e&lCông cụ"
+    slot: 12
+    item:
+      type: "DIAMOND_PICKAXE"
+      name: "&e&lCông cụ"
+      lore:
+        - "&7Danh mục công cụ"
+  armor:
+    name: "&b&lGiáp"
+    slot: 14
+    item:
+      type: "DIAMOND_CHESTPLATE"
+      name: "&b&lGiáp"
+      lore:
+        - "&7Danh mục giáp"
+  misc:
+    name: "&a&lKhác"
+    slot: 16
+    item:
+      type: "DIAMOND"
+      name: "&a&lKhác"
+      lore:
+        - "&7Danh mục khác"
