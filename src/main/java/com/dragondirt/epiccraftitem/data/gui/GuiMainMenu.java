@@ -4,6 +4,7 @@ import com.dragondirt.epiccraftitem.EpicCraftItem;
 import com.dragondirt.epiccraftitem.api.EpicCraftApi;
 import com.dragondirt.epiccraftitem.data.craft.category.CategoryList;
 import com.dragondirt.epiccraftitem.util.EpicCraftMethod;
+import com.dragondirt.epiccraftitem.util.GuiMethod;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -42,6 +43,7 @@ public class GuiMainMenu {
     public boolean renew() {
         this.inventory = createInventory();
         this.loadDataMainMenu();
+        GuiMethod.loadEditing(this);
         return true;
     }
 

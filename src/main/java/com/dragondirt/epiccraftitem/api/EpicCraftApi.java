@@ -13,6 +13,7 @@ import com.dragondirt.epiccraftitem.data.gui.GuiItemDetail;
 import com.dragondirt.epiccraftitem.data.gui.GuiItemsCategory;
 import com.dragondirt.epiccraftitem.data.gui.GuiMainMenu;
 import com.dragondirt.epiccraftitem.util.EpicCraftMethod;
+import com.dragondirt.epiccraftitem.util.FileManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -37,13 +38,13 @@ public class EpicCraftApi {
     private boolean debug;
     
     // File managers
-    private FileConfiguration configFile;
-    private FileConfiguration messageFile;
-    private FileConfiguration categoriesCraftFile;
-    private FileConfiguration mainMenuGuiFile;
-    private FileConfiguration itemsCategoryGuiFile;
-    private FileConfiguration itemCraftGuiFile;
-    private FileConfiguration itemDetailGuiFile;
+    private FileManager configFile;
+    private FileManager messageFile;
+    private FileManager categoriesCraftFile;
+    private FileManager mainMenuGuiFile;
+    private FileManager itemsCategoryGuiFile;
+    private FileManager itemCraftGuiFile;
+    private FileManager itemDetailGuiFile;
     
     // Data classes
     private ConfigData configData;
@@ -132,16 +133,28 @@ public class EpicCraftApi {
      * Load all configuration files
      */
     private void loadFiles() {
-        this.configFile = EpicCraftItem.getInstance().getConfig();
-        this.messageFile = EpicCraftItem.getInstance().getConfig();
-        this.categoriesCraftFile = EpicCraftItem.getInstance().getConfig();
-        this.mainMenuGuiFile = EpicCraftItem.getInstance().getConfig();
-        this.itemsCategoryGuiFile = EpicCraftItem.getInstance().getConfig();
-        this.itemCraftGuiFile = EpicCraftItem.getInstance().getConfig();
-        this.itemDetailGuiFile = EpicCraftItem.getInstance().getConfig();
+        this.configFile = createDefaultFile("config");
+        this.messageFile = createDefaultFile("message");
+        this.categoriesCraftFile = createDefaultFile("categories", "craft");
+        this.mainMenuGuiFile = createDefaultFile("mainMenu", "gui");
+        this.itemsCategoryGuiFile = createDefaultFile("itemsCategory", "gui");
+        this.itemCraftGuiFile = createDefaultFile("itemCraft", "gui");
+        this.itemDetailGuiFile = createDefaultFile("itemDetail", "gui");
         
         this.configData = new ConfigData();
         this.messageData = new MessageData();
+    }
+
+    /**
+     * Create default file
+     */
+    public FileManager createDefaultFile(@Nonnull String name, String... folders) {
+        FileManager fileManager = new FileManager(name + ".yml", EpicCraftItem.getInstance());
+        if (folders.length > 0) {
+            fileManager.createFolder(folders);
+        }
+        fileManager.copyDefault();
+        return fileManager;
     }
 
     /**
@@ -362,31 +375,31 @@ public class EpicCraftApi {
     }
 
     public FileConfiguration getConfigFile() {
-        return this.configFile;
+        return this.configFile.getConfig();
     }
 
     public FileConfiguration getMessageFile() {
-        return this.messageFile;
+        return this.messageFile.getConfig();
     }
 
     public FileConfiguration getCategoriesCraftFile() {
-        return this.categoriesCraftFile;
+        return this.categoriesCraftFile.getConfig();
     }
 
     public FileConfiguration getMainMenuGuiFile() {
-        return this.mainMenuGuiFile;
+        return this.mainMenuGuiFile.getConfig();
     }
 
     public FileConfiguration getItemsCategoryGuiFile() {
-        return this.itemsCategoryGuiFile;
+        return this.itemsCategoryGuiFile.getConfig();
     }
 
     public FileConfiguration getItemCraftGuiFile() {
-        return this.itemCraftGuiFile;
+        return this.itemCraftGuiFile.getConfig();
     }
 
     public FileConfiguration getItemDetailGuiFile() {
-        return this.itemDetailGuiFile;
+        return this.itemDetailGuiFile.getConfig();
     }
 
     public ConfigData getConfigData() {
